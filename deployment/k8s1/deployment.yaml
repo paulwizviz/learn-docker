@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s1-deployment
+  labels:
+    app: k8s1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s1
+  template:
+    metadata:
+      labels:
+        app: k8s1
+    spec:
+      containers:
+      - name: k8s1
+        image: paulwizviz/learn-k8s-restserver:0.1
+        ports:
+        - containerPort: 9090
