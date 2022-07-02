@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+
+  nonroot:
+    build:
+      context: ../../
+      dockerfile: ./build/nonroot/nonroot.dockerfile
+      args:
+        USER_NAME: ${USER_NAME}
+    image: ${NONROOT_IMAGE_NAME}

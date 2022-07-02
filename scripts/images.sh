@@ -6,7 +6,7 @@ COMMAND=$1
 
 case $COMMAND in
     "build")
-        docker-compose -f ./build/builder.yaml build
+        docker-compose -f ./build/shared/builder.yaml build
         ;;
     "clean")
         docker rmi -f ${RESTSERVER_IMAGE_NAME}

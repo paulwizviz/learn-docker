@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+
+  restserver:
+    build:
+      context: ../../
+      dockerfile: ./build/shared/restserver.dockerfile
+      args:
+        GO_VER: 1.16.2
+    image: ${RESTSERVER_IMAGE_NAME}
