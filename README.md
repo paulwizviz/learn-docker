@@ -19,20 +19,10 @@ A collection of examples demonstrating techniques to:
 * [Using Docker for CI/CD](./docs/cicd.md)
 * [Interacting with Docker deamon](./docs/dockerops.md)
 * [Local docker compose deployment](./docs/compose1.md)
-* [Minimal k8s](./docs/k8s1.md)
-* [MiniKube](./docs/minikube.md)
-
-## References
-
-* [Kubernetes Components](https://kubernetes.io/docs/concepts/overview/components/)
-* [The Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/)
-* [Working with Kubernetes Objects](https://kubernetes.io/docs/concepts/overview/working-with-objects/)
-* [Cluster Architecture](https://kubernetes.io/docs/concepts/architecture/)
 
 ## Disclaimer
 
-* The packages in this project are intended for educational purpose only.
-* This package is constantly updated and items may be removed and modified without warning.
+The working examples in this projects are purely for illustration only and are subject to modification without notice. Any opinions expressed is this project mine or belongs to the author of any referenced materials.
 
 ## Copyright
 
