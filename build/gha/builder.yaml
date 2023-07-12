@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+
+  gha:
+    build:
+      context: ../../
+      dockerfile: ./build/gha/gha.dockerfile
+    image: ${IMAGE_NAME}
