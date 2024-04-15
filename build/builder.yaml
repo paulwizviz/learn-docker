@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+
+  nonroot:
+    build:
+      context: ../
+      dockerfile: ./build/nonroot.dockerfile
+      args:
+        USER_NAME: ${USER_NAME}
+    image: ${NONROOT_IMAGE_NAME}
+
+  restserver:
+    build:
+      context: ../
+      dockerfile: ./build/restserver.dockerfile
+      args:
+        GO_VER: 1.16.2
+    image: ${RESTSERVER_IMAGE_NAME}

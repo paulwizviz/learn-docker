@@ -5,9 +5,8 @@ My brain dump on all things docker.
 ## Topics
 
 * [Docker networking](https://docs.docker.com/engine/tutorials/networkingcontainers/)
-* [Using Docker for CI/CD](./docs/cicd.md)
 * [Interacting with Docker deamon](./docs/dockerops.md)
-* [Local docker compose deployment](./docs/compose1.md)
+* [Local docker compose deployment](./docs/compose.md)
 
 ## Disclaimer
 

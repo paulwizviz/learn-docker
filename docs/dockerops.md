@@ -2,7 +2,7 @@
 
 Docker deployment comsists of a client, a deamon, and a registry.
 
-![Docker architecture](./img/docker-arch.svg)
+![Docker architecture](../assets/img/docker-arch.svg)
 Source: [Docker overview](https://docs.docker.com/get-started/overview/)
 
 You use the client to interact with the deamon. There are three types of clients:

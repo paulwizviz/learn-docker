@@ -2,9 +2,9 @@ version: '3.4'
 
 services:
 
-  gha:
-    image: ${IMAGE_NAME}
-    container_name: gha
+  restserver:
+    image: ${RESTSERVER_IMAGE_NAME}
+    container_name: restserver
     ports:
       - 80:9090
     networks:
@@ -13,5 +13,5 @@ services:
 networks:
   network1:
     driver: bridge
-    name: learn-compose_network1
+    name: learn-docker_network1
 

@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/docker/docker/client"
-	"github.com/paulwizviz/learn-container/internal/dockersdk"
+	"github.com/paulwizviz/learn-docker/internal/dockersdk"
 	"github.com/spf13/cobra"
 )
 
