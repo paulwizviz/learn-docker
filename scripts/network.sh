@@ -22,6 +22,8 @@ command:
     esac
 }
 
+export REST_NETWORK_NAME="learn-docker_rest"
+
 function rest_network(){
     local cmd=$1
     case $cmd in
@@ -32,7 +34,7 @@ function rest_network(){
             docker-compose -f ./deployments/restserver.yaml down
             ;;
         *)
-            echo "$0 gha [command]
+            echo "$0 rest [command]
 
 command:
     start   restserver network

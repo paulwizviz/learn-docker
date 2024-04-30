@@ -20,12 +20,13 @@ case $COMMAND in
     "nonroot")
         nonroot_op $SUBCOMMAND1
         ;;
-    "network")
+    "rest")
         rest_network $SUBCOMMAND1
         ;;
     "clean")
-        image    clean
-        nonroot  clean
+        image        clean
+        nonroot_op   clean
+        rest_network stop
         ;;
     *)
         echo "$0 [command]
@@ -33,6 +34,6 @@ case $COMMAND in
 command:
     image    related operations - build and clean
     nonroot  executing container with nonroot user
-    network  operations based on docker-compose"
+    rest     network"
         ;;
 esac

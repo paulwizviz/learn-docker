@@ -7,13 +7,15 @@ services:
       context: ../
       dockerfile: ./build/nonroot.dockerfile
       args:
+        OS_VER: 22.04
         USER_NAME: ${USER_NAME}
     image: ${NONROOT_IMAGE_NAME}
 
-  restserver:
+  rest:
     build:
       context: ../
       dockerfile: ./build/restserver.dockerfile
       args:
-        GO_VER: 1.16.2
+        GO_VER: 1.22.1
+        OS_VER: 3.18
     image: ${RESTSERVER_IMAGE_NAME}

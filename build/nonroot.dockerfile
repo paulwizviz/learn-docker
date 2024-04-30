@@ -1,4 +1,6 @@
-FROM ubuntu:18.04
+ARG OS_VER
+
+FROM ubuntu:${OS_VER}
 
 ARG USER_NAME
 

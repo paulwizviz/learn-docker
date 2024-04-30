@@ -1,4 +1,7 @@
-FROM golang:1.20.6-alpine3.18 AS builder
+ARG GO_VER
+ARG OS_VER
+
+FROM golang:${GO_VER}-alpine${OS_VER} AS builder
 
 WORKDIR /opt
 
@@ -8,7 +11,7 @@ COPY ./go.sum ./go.sum
 
 RUN go build -o ./bin/restserver ./cmd/restserver/main.go
 
-FROM alpine:3.18.2
+FROM alpine:${OS_VER}
 
 COPY --from=builder /opt/bin/restserver /usr/local/bin/restserver
 

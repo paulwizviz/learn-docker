@@ -8,10 +8,11 @@ services:
     ports:
       - 80:9090
     networks:
-      - network1
+      - local
 
 networks:
-  network1:
+  local:
     driver: bridge
-    name: learn-docker_network1
+    name: ${REST_NETWORK_NAME}
+
 
