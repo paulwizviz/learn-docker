@@ -1,14 +1,14 @@
 # Overview
 
-My brain dump on all things docker.
+This project discuss all things about Docker.
 
 ## Topics
 
-* [Docker networking](https://docs.docker.com/engine/tutorials/networkingcontainers/)
-* [Interacting with Docker deamon](./docs/dockerops.md)
-* [Local docker compose deployment](./docs/compose.md)
+* [Docker networking](./docs/networking.md)
+* [Application Development](./docs/app.md)
 
 ## Disclaimer
 
-The working examples in this projects are purely for illustration only and are subject to modification without notice. Any opinions expressed is this project mine or belongs to the author of any referenced materials.
+This projects are purely for educational and investigative purpose only. It is subject to change without notice.
 
+Unless otherwise stated, any opinion expressed in this project belongs to the contributor(s).
