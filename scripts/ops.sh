@@ -7,6 +7,7 @@ else
     . ./scripts/images.sh
     . ./scripts/ex1.sh
     . ./scripts/ex2.sh
+    . ./scripts/ex3.sh
 fi
 
 COMMAND=$1
@@ -22,6 +23,9 @@ case $COMMAND in
         ;;
     "ex2")
         ex2_ops $SUBCOMMAND1
+        ;;
+    "ex3")
+        ex3_ops $SUBCOMMAND1
         ;;
     "image")
         image $SUBCOMMAND1

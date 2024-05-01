@@ -18,12 +18,12 @@ function ex2_ops(){
             docker-compose -f ./deployments/ex2.yaml down
             ;;
         *)
-            echo "$0 rest [command]
+            echo "$0 ex2 [command]
 
 command:
     clean   stop network and clear container
-    start   restserver network
-    stop    restserver network"
+    start   ex2 network
+    stop    ex2 network"
             ;;
     esac
 }
