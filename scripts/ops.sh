@@ -5,35 +5,33 @@ if [ "$(basename $(realpath .))" != "learn-docker" ]; then
     exit 0
 else
     . ./scripts/images.sh
-    . ./scripts/network.sh
+    . ./scripts/ex1.sh
+    . ./scripts/ex2.sh
 fi
 
 COMMAND=$1
 SUBCOMMAND1=$2
 
-export USER_NAME="john"
-
 case $COMMAND in
+    "clean")
+        ex1_ops clean
+        ex2_ops clean        
+        ;;
+    "ex1")
+        ex1_ops $SUBCOMMAND1
+        ;;
+    "ex2")
+        ex2_ops $SUBCOMMAND1
+        ;;
     "image")
         image $SUBCOMMAND1
-        ;;
-    "nonroot")
-        nonroot_op $SUBCOMMAND1
-        ;;
-    "rest")
-        rest_network $SUBCOMMAND1
-        ;;
-    "clean")
-        image        clean
-        nonroot_op   clean
-        rest_network stop
         ;;
     *)
         echo "$0 [command]
 
 command:
-    image    related operations - build and clean
-    nonroot  executing container with nonroot user
-    rest     network"
+    clean  clear project of unused Docker artefacts
+    ex1    working example to demonstrate non-root container
+    ex2    demonstrate bridge networking example"
         ;;
 esac

@@ -4,15 +4,14 @@ services:
 
   restserver:
     image: ${RESTSERVER_IMAGE_NAME}
-    container_name: restserver
+    container_name: ${EX2_CONTAINER_NAME}
     ports:
       - 80:9090
     networks:
       - local
 
+
 networks:
   local:
-    driver: bridge
-    name: ${REST_NETWORK_NAME}
-
+    name: ${EX2_NETWORK_NAME}
 
