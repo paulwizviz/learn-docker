@@ -8,7 +8,7 @@ services:
     ports:
       - 9090:9090
     networks:
-      local:
+      net1:
         ipv4_address: 172.28.5.0
 
   ex3_2:
@@ -17,18 +17,35 @@ services:
     ports:
       - 9091:9090
     networks:
-      local:
+      net1:
         ipv4_address: 172.28.5.1
 
+  ex3_3:
+    image: ${RESTSERVER_IMAGE_NAME}
+    container_name: ex3_3
+    ports:
+      - 9092:9090
+    networks:
+      net2:
+        ipv4_address: 172.30.5.1
+
 networks:
-  local:
+  net1:
     driver: bridge
-    name: ${EX3_NETWORK_NAME}
+    name: ${EX3_1_NETWORK_NAME}
     ipam:
       driver: default
       config:
         - subnet: 172.28.0.0/16
           ip_range: 172.28.5.0/24
           gateway: 172.28.5.254
-      
 
+  net2:
+    driver: bridge
+    name: ${EX3_2_NETWORK_NAME}
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.30.0.0/16
+          ip_range: 172.30.5.0/24
+          gateway: 172.30.5.254

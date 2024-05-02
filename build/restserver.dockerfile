@@ -13,6 +13,10 @@ RUN go build -o ./bin/restserver ./cmd/restserver/main.go
 
 FROM alpine:${OS_VER}
 
+RUN apk update && \
+    apk upgrade && \
+    apk --no-cache add curl
+
 COPY --from=builder /opt/bin/restserver /usr/local/bin/restserver
 
 CMD /usr/local/bin/restserver

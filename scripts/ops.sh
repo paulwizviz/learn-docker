@@ -36,6 +36,7 @@ case $COMMAND in
 command:
     clean  clear project of unused Docker artefacts
     ex1    working example to demonstrate non-root container
-    ex2    demonstrate bridge networking example"
+    ex2    demonstrate bridge networking example
+    image  operations to build and clean images"
         ;;
 esac
