@@ -9,7 +9,7 @@ COPY ./cmd/restserver ./cmd/restserver
 COPY ./go.mod ./go.mod
 COPY ./go.sum ./go.sum
 
-RUN go build -o ./bin/restserver ./cmd/restserver/main.go
+RUN go build -o ./bin/restserver ./cmd/restserver
 
 FROM alpine:${OS_VER}
 
