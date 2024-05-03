@@ -5,7 +5,6 @@ go 1.22.0
 require (
 	github.com/docker/docker v20.10.17+incompatible
 	github.com/docker/go-connections v0.4.0
-	github.com/gorilla/mux v1.8.0
 	github.com/spf13/cobra v1.5.0
 )
 

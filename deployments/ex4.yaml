@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+
+  ex4_1:
+    image: ${SOCKET_IMAGE_NAME}
+    container_name: ${EX4_1_CONTAINER}
+    command: -server="false"
+    volumes:
+      - vol:/var/socket/
+    ports:
+      - 8081:9090
+    networks:
+      - local
+
+  ex4_2:
+    image: ${SOCKET_IMAGE_NAME}
+    container_name: ${EX4_2_CONTAINER}
+    volumes:
+     - vol:/var/socket/
+    ports:
+      - 8082:9090
+    networks:
+      - local
+
+networks:
+  local:
+    name: ${EX4_NETWORK_NAME}
+
+volumes:
+  vol:
+    name: ${EX4_SHARED_VOL}
+
