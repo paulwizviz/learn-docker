@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+
+  ex5:
+    image: ${TOOLS_IMAGE_NAME}
+    container_name: ${EX5_CONTAINER_NAME}
+    working_dir: /opt
+    networks:
+      net2:
+        ipv4_address: 192.168.0.10
+      net1:
+        ipv4_address: 172.30.5.1
+
+
+networks:
+  net2:
+    driver: bridge
+    name: ${EX5_NETWORK_2}
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.0.0/16
+          ip_range: 192.168.0.0/24
+          gateway: 192.168.0.254
+  net1:
+    driver: bridge
+    name: ${EX5_NETWORK_1}
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.30.0.0/16
+          ip_range: 172.30.5.0/24
+          gateway: 172.30.5.254
+

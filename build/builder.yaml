@@ -28,3 +28,12 @@ services:
         GO_VER: 1.22.1
         OS_VER: 3.18
     image: ${SOCKET_IMAGE_NAME}
+
+  tools:
+    build:
+      context: ../
+      dockerfile: ./build/tools.dockerfile
+      args:
+        GO_VER: 1.22.1
+        OS_VER: 3.18
+    image: ${TOOLS_IMAGE_NAME}

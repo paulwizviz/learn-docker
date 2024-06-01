@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$(basename $(realpath .))" != "learn-docker" ]; then
+if [ "$(basename $(realpath .))" != "go-docker" ]; then
     echo "You are outside of the project"
     exit 0
 else
@@ -9,6 +9,7 @@ else
     . ./scripts/ex2.sh
     . ./scripts/ex3.sh
     . ./scripts/ex4.sh
+    . ./scripts/ex5.sh
 fi
 
 COMMAND=$1
@@ -33,6 +34,9 @@ case $COMMAND in
         ;;
     "ex4")
         ex4_ops $SUBCOMMAND1
+        ;;
+    "ex5")
+        ex5_ops $SUBCOMMAND1
         ;;
     "image")
         image $SUBCOMMAND1
