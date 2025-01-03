@@ -1,4 +1,4 @@
-module github.com/paulwizviz/learn-docker
+module github.com/paulwizviz/learn-go-docker
 
 go 1.22.0
 

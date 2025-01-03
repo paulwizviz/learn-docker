@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/docker/docker/client"
-	"github.com/paulwizviz/learn-docker/internal/dockersdk"
+	"github.com/paulwizviz/learn-go-docker/internal/dockersdk"
 	"github.com/spf13/cobra"
 )
 

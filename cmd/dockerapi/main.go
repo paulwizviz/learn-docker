@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/paulwizviz/learn-docker/internal/dockerapi"
+	"github.com/paulwizviz/learn-go-docker/internal/dockerapi"
 )
 
 func main() {
